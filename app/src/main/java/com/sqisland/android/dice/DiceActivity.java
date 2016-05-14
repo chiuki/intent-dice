@@ -7,6 +7,8 @@ import android.widget.TextView;
 import java.util.Random;
 
 public class DiceActivity extends Activity {
+  public static final String KEY_NUM_DICE = "num_dice";
+
   private Random random = new Random();
 
   @Override
@@ -16,7 +18,7 @@ public class DiceActivity extends Activity {
 
     TextView resultView = (TextView) findViewById(R.id.result);
 
-    int numDice = 2;
+    int numDice = getIntent().getIntExtra(KEY_NUM_DICE, 1);
 
     rollAll(resultView, numDice);
   }

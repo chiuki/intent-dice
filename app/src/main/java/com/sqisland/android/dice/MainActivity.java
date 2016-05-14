@@ -22,6 +22,7 @@ public class MainActivity extends Activity {
 
   private void roll() {
     Intent intent = new Intent(this, DiceActivity.class);
+    intent.putExtra(DiceActivity.KEY_NUM_DICE, 3);
     startActivity(intent);
   }
 }
