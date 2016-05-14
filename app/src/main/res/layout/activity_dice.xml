@@ -1,10 +1,13 @@
-<Button
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/roll_button"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:text="@string/roll"
-    android:textSize="28sp"
-    tools:context=".MainActivity"/>
+    tools:context=".DiceActivity">
+  <TextView
+    android:id="@+id/result"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="48sp"/>
+</LinearLayout>
