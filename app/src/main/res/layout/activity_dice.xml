@@ -1,10 +1,22 @@
-<TextView
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:tools="http://schemas.android.com/tools"
-  android:id="@+id/result"
-  android:layout_width="wrap_content"
-  android:layout_height="wrap_content"
-  android:layout_gravity="center"
-  android:gravity="center"
-  android:textSize="48sp"
-  tools:context=".DiceActivity"/>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".DiceActivity">
+  <TextView
+    android:id="@+id/result"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="48sp"/>
+  <Button
+    android:id="@+id/done_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:text="@string/done"
+    android:textSize="28sp"/>
+</LinearLayout>
