@@ -16,9 +16,31 @@ public class DiceActivity extends Activity {
 
     TextView resultView = (TextView) findViewById(R.id.result);
 
-    int result = rollOne();
-    String text = String.valueOf(result);
-    resultView.setText(text);
+    int numDice = 2;
+
+    rollAll(resultView, numDice);
+  }
+
+  private void rollAll(TextView textView, int numDice) {
+    StringBuilder builder = new StringBuilder();
+    int total = 0;
+    for (int i = 0; i < numDice; ++i) {
+      int result = rollOne();
+      total += result;
+
+      if (i > 0) {
+        builder.append(" + ");
+      }
+
+      builder.append(result);
+
+      if (numDice > 1 && i == numDice - 1) {
+        builder.append(" = ");
+        builder.append(total);
+      }
+    }
+
+    textView.setText(builder.toString());
   }
 
   private int rollOne() {
